@@ -42,7 +42,7 @@ Example:
 
 <!-- app/views/posts/show.html.erb -->
 
-<%= render_with_areas do |layout| %>
+<%= render_with_areas 'ui/modal' do |layout| %>
   <% layout.with :header do %>
     <h1>Modal Title</h1>
   <% end %>
@@ -56,7 +56,7 @@ Example:
 
 
 <!-- also supports locals, strings -->
-<%= render_with_areas, title: "Modal Title" do |layout| %>
+<%= render_with_areas 'path/to/partial', title: "Modal Title" do |layout| %>
   This will show up as "content"
 
   <% layout.with :footer, "Footer" %>
